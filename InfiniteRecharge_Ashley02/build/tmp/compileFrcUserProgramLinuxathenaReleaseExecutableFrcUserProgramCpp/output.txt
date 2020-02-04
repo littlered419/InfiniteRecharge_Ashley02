@@ -1,0 +1,11 @@
+See file:///C:/Users/STUDENT/Desktop/FRC2020/InfiniteRecharge_Ashley02/build/tmp/compileFrcUserProgramLinuxathenaReleaseExecutableFrcUserProgramCpp/output.txt for all output for compileFrcUserProgramLinuxathenaReleaseExecutableFrcUserProgramCpp.
+compiling Robot.cpp failed.
+C:\Users\STUDENT\Desktop\FRC2020\InfiniteRecharge_Ashley02\src\main\cpp\Robot.cpp:44:1: error: 'frc::RobotDrive::RobotDrive' names the constructor, not the type
+ frc::RobotDrive::RobotDrive *myDrive = new RobotDrive(leftMotorMaster, leftMotorSlave, rightMotorMaster, rightMotorSlave);
+ ^~~
+C:\Users\STUDENT\Desktop\FRC2020\InfiniteRecharge_Ashley02\src\main\cpp\Robot.cpp: In member function 'virtual void Robot::TeleopPeriodic()':
+C:\Users\STUDENT\Desktop\FRC2020\InfiniteRecharge_Ashley02\src\main\cpp\Robot.cpp:119:63: error: cannot call member function 'void frc::RobotDrive::ArcadeDrive(double, double, bool)' without object
+   frc::RobotDrive::ArcadeDrive(forwardSpeed, turnAmount, false);
+                                                               ^
+
+Finished compileFrcUserProgramLinuxathenaReleaseExecutableFrcUserProgramCpp, see full log file:///C:/Users/STUDENT/Desktop/FRC2020/InfiniteRecharge_Ashley02/build/tmp/compileFrcUserProgramLinuxathenaReleaseExecutableFrcUserProgramCpp/output.txt.
