@@ -18,7 +18,8 @@
 #include <frc/Joystick.h>  // Library for robot controllers
 #include <cameraserver/CameraServer.h>  // Library for the camera to work
 #include <frc/drive/DifferentialDrive.h>  // Library for arcade drive
-#include <frc/robotdrive.h>  // Library to allow the robot to drive
+#include <frc/RobotDrive.h>  // Library to allow the robot to drive
+#include <frc/drive/RobotDriveBase.h>
 #include <frc/GenericHID.h>
 
 #include "ctre/Phoenix.h"  // Library for motor controller
@@ -30,18 +31,19 @@
 // ---------------------------------------------------------------
 
 // Define drive motors
-VictorSPX *leftMotorMaster = new VictorSPX(1);
-VictorSPX *leftMotorSlave = new VictorSPX(2);
-VictorSPX *rightMotorMaster = new VictorSPX(3);
-VictorSPX *rightMotorSlave = new VictorSPX(4);
+WPI_VictorSPX *leftMotorMaster = new WPI_VictorSPX(1);
+WPI_VictorSPX *leftMotorSlave = new WPI_VictorSPX(2);
+WPI_VictorSPX *rightMotorMaster = new WPI_VictorSPX(3);
+WPI_VictorSPX *rightMotorSlave = new WPI_VictorSPX(4);
 // Define manipulator motors
-VictorSPX *shooterRotate = new VictorSPX(5);
-VictorSPX *shooterWheelA = new VictorSPX(6);
-VictorSPX *shooterWheelB = new VictorSPX(7);
-VictorSPX *shooterSpring = new VictorSPX(8); 
-VictorSPX *climbingLift = new VictorSPX(9);
+WPI_VictorSPX *shooterRotate = new WPI_VictorSPX(5);
+WPI_VictorSPX *shooterWheelA = new WPI_VictorSPX(6);
+WPI_VictorSPX *shooterWheelB = new WPI_VictorSPX(7);
+WPI_VictorSPX *shooterSpring = new WPI_VictorSPX(8); 
+WPI_VictorSPX *climbingLift = new WPI_VictorSPX(9);
 
-RobotDrive *myDrive = new RobotDrive(leftMotorMaster, leftMotorSlave, rightMotorMaster, rightMotorSlave);
+
+frc::DifferentialDrive *robotDrive = new frc::DifferentialDrive(*leftMotorMaster, *rightMotorMaster);
 
 
 // ---------------------------------------------------------------
@@ -49,8 +51,8 @@ RobotDrive *myDrive = new RobotDrive(leftMotorMaster, leftMotorSlave, rightMotor
 // Define which controllers (joysticks) will be the driver or coDriver for control
 // ---------------------------------------------------------------
 
-frc::Joystick * driver = new frc::Joystick(0);
-frc::Joystick * coDriver = new frc::Joystick(1);
+frc::Joystick *driver = new frc::Joystick(0);
+frc::Joystick *coDriver = new frc::Joystick(1);
 
 
 void Robot::RobotInit() {
@@ -63,16 +65,15 @@ void Robot::RobotInit() {
   // Define motor followers
   // Assign certain motors to follow the same instructions of their master motor
   // ---------------------------------------------------------------
-/*
-  leftMotorSlave->Set(ControlMode::Follower, 1);
-  rightMotorSlave->Set(ControlMode::Follower, 3);
-*/
+
+  //leftMotorSlave->Set(ControlMode::Follower, 1);
+  //rightMotorSlave->Set(ControlMode::Follower, 3);
+
   // ---------------------------------------------------------------
   // Robot Drive Code
   // Define the robot drive assignments to allow for arcade drive
   // ---------------------------------------------------------------
 
-  //frc::RobotDrive::RobotDrive(leftMotorMaster, leftMotorSlave, rightMotorMaster, rightMotorSlave);
 }
 
 void Robot::RobotPeriodic() {}
@@ -100,8 +101,6 @@ void Robot::AutonomousPeriodic() {
 
 void Robot::TeleopInit() {
   /*                    Driver Controller Code                    */
-
-
 }
 
 void Robot::TeleopPeriodic() {
@@ -111,12 +110,7 @@ void Robot::TeleopPeriodic() {
   // Define the robot to drive with an arcade drive
   // ---------------------------------------------------------------
 
-  //frc::RobotDrive::ArcadeDrive(driver->GetRawAxis(2), driver->GetRawAxis(1));
-
-  double forwardSpeed = driver->GetRawAxis(1);
-  double turnAmount = driver->GetRawAxis(2);
-
-  frc::RobotDrive::ArcadeDrive(forwardSpeed, turnAmount, false);
+  robotDrive->ArcadeDrive(1, 1, false);
 }
 
 void Robot::TestPeriodic() {}
