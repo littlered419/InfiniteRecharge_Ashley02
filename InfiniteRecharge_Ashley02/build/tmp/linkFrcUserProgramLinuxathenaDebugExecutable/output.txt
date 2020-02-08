@@ -1,4 +1,4 @@
-See file:///C:/Users/STUDENT/Desktop/FRC2020/InfiniteRecharge_Ashley02/build/tmp/linkFrcUserProgramLinuxathenaDebugExecutable/output.txt for all output for linkFrcUserProgramLinuxathenaDebugExecutable.
+See file:///C:/Users/Littl/Desktop/InfiniteRecharge_Ashley02-master/InfiniteRecharge_Ashley02-master/InfiniteRecharge_Ashley02/build/tmp/linkFrcUserProgramLinuxathenaDebugExecutable/output.txt for all output for linkFrcUserProgramLinuxathenaDebugExecutable.
 linking frcUserProgram successful.
 
-Finished linkFrcUserProgramLinuxathenaDebugExecutable, see full log file:///C:/Users/STUDENT/Desktop/FRC2020/InfiniteRecharge_Ashley02/build/tmp/linkFrcUserProgramLinuxathenaDebugExecutable/output.txt.
+Finished linkFrcUserProgramLinuxathenaDebugExecutable, see full log file:///C:/Users/Littl/Desktop/InfiniteRecharge_Ashley02-master/InfiniteRecharge_Ashley02-master/InfiniteRecharge_Ashley02/build/tmp/linkFrcUserProgramLinuxathenaDebugExecutable/output.txt.

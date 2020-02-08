@@ -1,4 +1,4 @@
-See file:///C:/Users/STUDENT/Desktop/FRC2020/InfiniteRecharge_Ashley02/build/tmp/compileFrcUserProgramLinuxathenaReleaseExecutableFrcUserProgramCpp/output.txt for all output for compileFrcUserProgramLinuxathenaReleaseExecutableFrcUserProgramCpp.
+See file:///C:/Users/Littl/Desktop/InfiniteRecharge_Ashley02-master/InfiniteRecharge_Ashley02-master/InfiniteRecharge_Ashley02/build/tmp/compileFrcUserProgramLinuxathenaReleaseExecutableFrcUserProgramCpp/output.txt for all output for compileFrcUserProgramLinuxathenaReleaseExecutableFrcUserProgramCpp.
 compiling Robot.cpp successful.
 
-Finished compileFrcUserProgramLinuxathenaReleaseExecutableFrcUserProgramCpp, see full log file:///C:/Users/STUDENT/Desktop/FRC2020/InfiniteRecharge_Ashley02/build/tmp/compileFrcUserProgramLinuxathenaReleaseExecutableFrcUserProgramCpp/output.txt.
+Finished compileFrcUserProgramLinuxathenaReleaseExecutableFrcUserProgramCpp, see full log file:///C:/Users/Littl/Desktop/InfiniteRecharge_Ashley02-master/InfiniteRecharge_Ashley02-master/InfiniteRecharge_Ashley02/build/tmp/compileFrcUserProgramLinuxathenaReleaseExecutableFrcUserProgramCpp/output.txt.
